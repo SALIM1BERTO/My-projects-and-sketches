@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        function multi7() {
+
+            let x = document.getElementById("x").value;
+            let resposta = document.getElementById("resposta");
+
+            x = Number(x);
+            
+            if (x % 7 == 0) {
+                resposta.textContent = x + " é múltiplo de 7";
+            
+            }else{
+                
+                    resposta.textContent = x + " não é múltiplo de 7";
+                
+                }
+            }
+
+        
+    </script>
+    <title>Comparando valores</title>
+    </head>
+
+    <h1>VERIFICAR MÚLTIPLOS DE 7</h1>
+
+    <body>
+        <form>
+            <p><label>Entre com um valor numérico: <input type="text" name="x" id="x"></label></p>
+
+            <input type="button" value="Verificar" onclick="multi7()">
+
+        </form>
+        <p id="resposta"></p>
+    </body>
+</html>

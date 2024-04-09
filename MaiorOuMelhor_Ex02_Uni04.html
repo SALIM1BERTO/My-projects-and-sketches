@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        function QualMaiorEoMenor() {
+
+            let x = document.getElementById("x").value;
+            let y = document.getElementById("y").value;
+            let z = document.getElementById("z").value;
+            let resposta = document.getElementById("resposta");
+
+            x = Number(x);
+            y = Number(y);
+            z = Number(z);
+
+            if (x > y) {
+               
+                if(x > z) {
+
+                    if(y > z){
+
+                        resposta.textContent = x + " é o maior número e " + z + " é o menor";
+
+                    }else{
+
+                        resposta.textContent = x + " é o maior número e " + y + " é o menor";
+
+                    }
+
+                }else{
+
+                    resposta.textContent = z + " é o maior número e " + y + " é o menor";
+                      
+
+                }
+            
+            }else{
+                
+                if(y > z){
+
+                    if(x > z){
+
+                        resposta.textContent = y + " é o maior número e " + z + " é o menor";
+
+                    }else{
+
+                        resposta.textContent = y + " é o maior número e " + x + " é o menor";
+
+                    }
+
+                }else{
+
+                    resposta.textContent = z + " é o maior número e " + x + " é o menor";
+
+                }     
+
+            }
+
+        }
+    </script>
+    <title>Maior e menor</title>
+    </head>
+
+    <body>
+        <form>
+            <p><label>Entre com um valor numérico: <input type="text" name="x" id="x"></label></p>
+            <p><label>Entre com um valor numérico: <input type="text" name="y" id="y"></label></p>
+            <p><label>Entre com um valor numérico: <input type="text" name="z" id="z"></label></p>
+
+            <input type="button" value="Comparar" onclick="QualMaiorEoMenor()">
+
+        </form>
+        <p id="resposta"></p>
+    </body>
+</html>

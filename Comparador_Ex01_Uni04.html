@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        function igualOuMaior() {
+
+            let x = document.getElementById("x").value;
+            let y = document.getElementById("y").value;
+            let resposta = document.getElementById("resposta");
+
+            x = Number(x);
+            y = Number(y);
+
+            if (x == y) {
+                resposta.textContent = x + " é igual a " + y;
+            
+            }else{
+                if (x > y) {
+                    resposta.textContent = x + " é maior que " + y;
+                }else{
+                    resposta.textContent = x + " é menor que " + y;
+                }
+            }
+
+        }
+    </script>
+    <title>Comparando valores</title>
+    </head>
+
+    <body>
+        <form>
+            <p><label>Entre com um valor numérico: <input type="text" name="x" id="x"></label></p>
+            <p><label>Entre com um valor numérico: <input type="text" name="y" id="y"></label></p>
+
+            <input type="button" value="Comparar" onclick="igualOuMaior()">
+
+        </form>
+        <p id="resposta"></p>
+    </body>
+</html>

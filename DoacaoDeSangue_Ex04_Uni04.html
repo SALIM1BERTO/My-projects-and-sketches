@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        function sangue() {
+
+            let x = document.getElementById("x").value;
+            let resposta = document.getElementById("resposta");
+
+            x = Number(x);
+            
+            if (x > 17 && x < 68) {
+                resposta.textContent = "Você pode doar sangue";
+            
+            }else{
+                
+                    resposta.textContent = "Você não pode doar sangue";
+                
+                }
+            }
+
+        
+    </script>
+    <title>Comparando valores</title>
+    </head>
+
+    <body>
+        <h1>Doar sangue</h1>
+        <form>
+            <p><label>Quantos anos você tem? <input type="text" name="x" id="x"></label></p>
+
+            <input type="button" value="Verificar" onclick="sangue()">
+
+        </form>
+        <p id="resposta"></p>
+    </body>
+</html>
