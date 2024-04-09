@@ -1,0 +1,14 @@
+<meta charset="UTF-8">
+<script>
+    console.log(!true);                     // -> false
+    console.log(!false);                    // -> true
+
+    const a = false;
+    const b = true;
+    const c = false;
+    const d = true;
+    
+    console.log(a && b && c || d)           // -> true
+    console.log(a && b && (c || d));        // -> false
+    
+</script>
